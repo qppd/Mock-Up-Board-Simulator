@@ -6,11 +6,13 @@
 #include "I2CLcd.h"
 #include "FlameSensor.h"
 #include "ServoMotor.h"
+#include "JoystickController.h"
 
 
 I2CLcd lcd(0x27, 16, 2); // Typical I2C address and 16x2 LCD
 FlameSensor flameSensor(A0, 2); // Example: analog pin A0, digital pin 2
 ServoMotor servoMotor(9); // Attach servo to pin 9
+JoystickController joystick(A1, A2, 3); // VRx=A1, VRy=A2, SW=3
 
 void setup() {
   Serial.begin(9600);
@@ -18,6 +20,7 @@ void setup() {
   lcd.print("Hello, I2C LCD!");
   flameSensor.begin();
   servoMotor.begin();
+  joystick.begin();
   // Initialize board simulation
 }
 
@@ -47,8 +50,18 @@ void loop() {
     } else if (cmd == "SERVO_DETACH") {
       servoMotor.detach();
       Serial.println("Servo detached.");
+    } else if (cmd == "JOYSTICK") {
+      int x = joystick.readX();
+      int y = joystick.readY();
+      bool sw = joystick.readSwitch();
+      Serial.print("Joystick X: ");
+      Serial.print(x);
+      Serial.print(", Y: ");
+      Serial.print(y);
+      Serial.print(", SW: ");
+      Serial.println(sw ? "PRESSED" : "RELEASED");
     } else {
-      Serial.println("Unknown command. Use 'LCD', 'FLAME', 'SERVO:<angle>', 'SERVO_READ', 'SERVO_DETACH'.");
+      Serial.println("Unknown command. Use 'LCD', 'FLAME', 'SERVO:<angle>', 'SERVO_READ', 'SERVO_DETACH', 'JOYSTICK'.");
     }
   }
 }
