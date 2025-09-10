@@ -152,4 +152,23 @@ Contributions are welcome! Please open issues or pull requests for bug fixes, ne
 
 ## 📜 License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+---
+
+## 📬 Contact
+
+- **Email:** [quezon.province.pd@gmail.com](mailto:quezon.province.pd@gmail.com)
+- **GitHub:** [qppd](https://github.com/qppd)
+- **Portfolio:** [sajed-mendoza.onrender.com](https://sajed-mendoza.onrender.com)
+- **Facebook:** [facebook.com/qppd.dev](https://facebook.com/qppd.dev)
+- **Facebook Page:** [facebook.com/QUEZONPROVINCEDEVS](https://facebook.com/QUEZONPROVINCEDEVS)
+
+<p align="center">
+	<a href="mailto:quezon.province.pd@gmail.com"><img src="https://img.shields.io/badge/email-quezon.province.pd@gmail.com-blue?style=flat-square&logo=gmail" alt="Email"></a>
+	<a href="https://github.com/qppd"><img src="https://img.shields.io/badge/github-qppd-black?style=flat-square&logo=github" alt="GitHub"></a>
+	<a href="https://sajed-mendoza.onrender.com"><img src="https://img.shields.io/badge/portfolio-sajed--mendoza.onrender.com-green?style=flat-square&logo=internet-explorer" alt="Portfolio"></a>
+	<a href="https://facebook.com/qppd.dev"><img src="https://img.shields.io/badge/facebook-qppd.dev-1877F2?style=flat-square&logo=facebook" alt="Facebook"></a>
+	<a href="https://facebook.com/QUEZONPROVINCEDEVS"><img src="https://img.shields.io/badge/facebook-QUEZONPROVINCEDEVS-1877F2?style=flat-square&logo=facebook" alt="Facebook Page"></a>
+</p>
+
+---
