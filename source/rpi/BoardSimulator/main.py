@@ -6,12 +6,13 @@ from i2c_lcd import I2CLcd
 from flame_sensor import FlameSensor
 from servo_motor import ServoMotor
 from joystick_controller import JoystickController
+import pins
 
 def main():
-    lcd = I2CLcd(0x27, 16, 2)
-    flame_sensor = FlameSensor(0, 2)
-    servo_motor = ServoMotor(9)
-    joystick = JoystickController(1, 2, 3)
+    lcd = I2CLcd(pins.LCD_ADDR, pins.LCD_COLS, pins.LCD_ROWS)
+    flame_sensor = FlameSensor(pins.FLAME_ANALOG_PIN, pins.FLAME_DIGITAL_PIN)
+    servo_motor = ServoMotor(pins.SERVO_PIN)
+    joystick = JoystickController(pins.JOY_VRX_PIN, pins.JOY_VRY_PIN, pins.JOY_SW_PIN)
 
     lcd.begin()
     lcd.print("Hello, I2C LCD!")

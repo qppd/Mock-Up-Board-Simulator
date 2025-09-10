@@ -7,12 +7,13 @@
 #include "FlameSensor.h"
 #include "ServoMotor.h"
 #include "JoystickController.h"
+#include "Pins.h"
 
 
-I2CLcd lcd(0x27, 16, 2); // Typical I2C address and 16x2 LCD
-FlameSensor flameSensor(A0, 2); // Example: analog pin A0, digital pin 2
-ServoMotor servoMotor(9); // Attach servo to pin 9
-JoystickController joystick(A1, A2, 3); // VRx=A1, VRy=A2, SW=3
+I2CLcd lcd(LCD_ADDR, LCD_COLS, LCD_ROWS);
+FlameSensor flameSensor(FLAME_ANALOG_PIN, FLAME_DIGITAL_PIN);
+ServoMotor servoMotor(SERVO_PIN);
+JoystickController joystick(JOY_VRX_PIN, JOY_VRY_PIN, JOY_SW_PIN);
 
 void setup() {
   Serial.begin(9600);
