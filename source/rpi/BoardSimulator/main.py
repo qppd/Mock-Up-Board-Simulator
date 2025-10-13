@@ -6,21 +6,29 @@ from i2c_lcd import I2CLcd
 from flame_sensor import FlameSensor
 from servo_motor import ServoMotor
 from joystick_controller import JoystickController
+from matrix_keypad import MatrixKeypad
 import pins
+import atexit
 
 def main():
     lcd = I2CLcd(pins.LCD_ADDR, pins.LCD_COLS, pins.LCD_ROWS)
     flame_sensor = FlameSensor(pins.FLAME_ANALOG_PIN, pins.FLAME_DIGITAL_PIN)
     servo_motor = ServoMotor(pins.SERVO_PIN)
     joystick = JoystickController(pins.JOY_VRX_PIN, pins.JOY_VRY_PIN, pins.JOY_SW_PIN)
+    keypad = MatrixKeypad(pins.KEYPAD_ROW_PINS, pins.KEYPAD_COL_PINS, pins.KEYPAD_LAYOUT)
+
+    # Register cleanup function
+    atexit.register(lambda: keypad.cleanup())
 
     lcd.begin()
     lcd.print("Hello, I2C LCD!")
     flame_sensor.begin()
     servo_motor.begin()
     joystick.begin()
+    keypad.begin()
 
-    print("Type commands: LCD, FLAME, SERVO:<angle>, SERVO_READ, SERVO_DETACH, JOYSTICK, or EXIT")
+    print("Board Simulator Ready!")
+    print("Type commands: LCD, FLAME, SERVO:<angle>, SERVO_READ, SERVO_DETACH, JOYSTICK, KEYPAD, KEYPAD_TEST, or EXIT")
     while True:
         cmd = input(">> ").strip()
         if cmd.upper() == "EXIT":
@@ -49,8 +57,18 @@ def main():
             y = joystick.read_y()
             sw = joystick.read_switch()
             print(f"Joystick X: {x}, Y: {y}, SW: {'PRESSED' if sw else 'RELEASED'}")
+        elif cmd.upper() == "KEYPAD":
+            key = keypad.get_key()
+            if key is not None:
+                key_name = keypad.get_key_name(key)
+                print(f"Key pressed: {key} ({key_name})")
+            else:
+                print("No key pressed")
+        elif cmd.upper() == "KEYPAD_TEST":
+            test_result = keypad.self_test()
+            print(f"Keypad self-test: {'PASSED' if test_result else 'FAILED'}")
         else:
-            print("Unknown command. Use 'LCD', 'FLAME', 'SERVO:<angle>', 'SERVO_READ', 'SERVO_DETACH', 'JOYSTICK', or 'EXIT'.")
+            print("Unknown command. Use 'LCD', 'FLAME', 'SERVO:<angle>', 'SERVO_READ', 'SERVO_DETACH', 'JOYSTICK', 'KEYPAD', 'KEYPAD_TEST', or 'EXIT'.")
 
 if __name__ == "__main__":
     main()
