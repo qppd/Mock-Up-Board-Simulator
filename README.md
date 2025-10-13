@@ -25,9 +25,9 @@
 - Modular code for both Arduino and Raspberry Pi
 - Serial/command-line interface for testing components
 - Easy pin mapping and configuration
+- RFID RC522 module support (tag/card authentication)
 - **Planned:**
 	- Infrared Receiver
-	- RFID System
 	- Password Lock
 	- Sound Sensor
 	- Dot Matrix Display
@@ -45,7 +45,7 @@
 | Joystick            | Analog + digital input     |
 | **Planned:**        |                            |
 | Infrared Receiver   | Remote control input       |
-| RFID System         | Tag/card authentication    |
+| RFID RC522 Module   | Tag/card authentication    |
 | Password Lock       | Keypad/password input      |
 | Sound Sensor        | Audio detection            |
 | Dot Matrix Display  | LED matrix output          |
@@ -60,7 +60,8 @@
 	- Raspberry Pi (any model with Python 3)
 	- Breadboard, jumper wires
 	- 16x2 I2C LCD, Flame Sensor, Servo Motor, Joystick
-	- (Optional: Infrared, RFID, Sound, Matrix, Ultrasonic modules)
+		- (Optional: Infrared, Password Lock, Sound, Matrix, Ultrasonic modules)
+		- RFID RC522 module (SPI interface)
 - **Software:**
 	- Arduino IDE (for Arduino code)
 	- Python 3.x (for Raspberry Pi simulation)
@@ -75,7 +76,7 @@
 ### Arduino
 1. Open `source/arduino/BoardSimulator/BoardSimulator.ino` in Arduino IDE.
 2. Install required libraries: `LiquidCrystal_I2C`, `Servo` (via Library Manager).
-3. Connect components as per the wiring diagram below.
+3. Connect components as per the wiring diagram below. For RFID, connect the RC522 module to the SPI pins (see wiring section).
 4. Upload the sketch to your Arduino board.
 5. Open Serial Monitor (9600 baud) to interact with the simulator.
 
@@ -110,6 +111,7 @@ source/
 		FlameSensor.h/.cpp         # Flame sensor driver
 		ServoMotor.h/.cpp          # Servo motor driver
 		JoystickController.h/.cpp  # Joystick driver
+		RFID_RC522.h/.cpp          # RFID RC522 driver
 		Pins.h                     # Pin assignments
 	rpi/BoardSimulator/
 		main.py                    # Main Python entry point
@@ -117,6 +119,7 @@ source/
 		flame_sensor.py            # Flame sensor simulation
 		servo_motor.py             # Servo simulation
 		joystick_controller.py     # Joystick simulation
+		rfid_rc522.py              # RFID RC522 simulation
 		pins.py                    # Pin assignments
 diagram/
 	Wiring.fzz                   # Fritzing wiring diagram
