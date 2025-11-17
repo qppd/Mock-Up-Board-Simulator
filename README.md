@@ -125,6 +125,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Dot Matrix 8x8 Display Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Joystick Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Servo Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
+| **Sound Sensor Mount (Top & Bottom)** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
@@ -135,6 +136,8 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ![Joystick Mount Preview](model/Board_Simulator_Joy_Stick_Mount.png)
 
 ![Servo Mount Preview](model/Board_Simulator_Servo_Mount.png)
+
+![Sound Sensor Mount Preview](model/Board_Simulator_Sound_Sensor_Mount.png)
 
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
@@ -448,7 +451,11 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 CE3V3SE_Board_Simulator_Dot_Matrix_Mount.gcode # GCODE for dot matrix mount (CE3V3SE)
 │   ├── 📄 Board_Simulator_Joy_Stick_Mount.png    # Joystick mount preview image
 │   ├── 📄 Board_Simulator_Servo_Mount.png    # Servo mount preview image
-│   └── 📄 CE3V3SE_Board_Simulator_Servo_Mount.gcode # GCODE for servo mount (CE3V3SE)
+│   ├── 📄 CE3V3SE_Board_Simulator_Servo_Mount.gcode # GCODE for servo mount (CE3V3SE)
+│   ├── 📄 Board_Simulator_Sound_Sensor_Mount.png    # Sound sensor mount preview image
+│   ├── 📄 Board_Simulator_Sound_Sensor_Mount_Bottom.stl    # 3D printable sound sensor mount bottom
+│   ├── 📄 Board_Simulator_Sound_Sensor_Mount_Top.stl    # 3D printable sound sensor mount top
+│   └── 📄 CE3V3SE_Board_Simulator_Sound_Sensor_Mount.gcode # GCODE for sound sensor mount (CE3V3SE)
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
