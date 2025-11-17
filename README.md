@@ -121,8 +121,14 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | Component | Material | Print Time | Printer Compatibility |
 |-----------|----------|------------|----------------------|
 | **LCD Mount** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
+| **Ultrasonic Sensor Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
+| **Dot Matrix 8x8 Display Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
+
+![Ultrasonic Sensor Mount Preview](model/Board_Simulator_Ultrasonic_Mount.png)
+
+![Dot Matrix Display Mount Preview](model/Board_Simulator_Dot_Matrix_Mount.png)
 
 ---
 
@@ -424,7 +430,13 @@ Mock-Up-Board-Simulator/
 ├── 📁 model/                               # 3D Models & Enclosures
 │   ├── 📄 Board_Simulator_Lcd_Mount.stl    # 3D printable LCD mount
 │   ├── 📄 Board_Simulator_Lcd_Mount.png    # LCD mount preview image
-│   └── 📄 CE3V3SE_Board_Simulator_Lcd_Mount.gcode # GCODE for CE3V3SE printer
+│   ├── 📄 CE3V3SE_Board_Simulator_Lcd_Mount.gcode # GCODE for LCD mount (CE3V3SE)
+│   ├── 📄 Board_Simulator_Ultrasonic_Mount.stl    # 3D printable ultrasonic sensor mount
+│   ├── 📄 Board_Simulator_Ultrasonic_Mount.png    # Ultrasonic mount preview image
+│   ├── 📄 CE3V3SE_Board_Simulator_Ultrasonic_Mount.gcode # GCODE for ultrasonic mount (CE3V3SE)
+│   ├── 📄 Board_Simulator_Dot_Matrix_Mount.stl    # 3D printable dot matrix display mount
+│   ├── 📄 Board_Simulator_Dot_Matrix_Mount.png    # Dot matrix mount preview image
+│   └── 📄 CE3V3SE_Board_Simulator_Dot_Matrix_Mount.gcode # GCODE for dot matrix mount (CE3V3SE)
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
