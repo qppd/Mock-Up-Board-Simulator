@@ -145,6 +145,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
 - **Sound Sensor Mount**: Based on the design "KY-037 Sensor Cover/Mount" by [uli](https://makerworld.com/en/@user_1317706578) from [MakerWorld](https://makerworld.com/en/models/1345720-ky-037-sensor-cover-mount#profileId-1387172). Modified for the Mock Up Board Simulator.
+- **RFID Mount**: Based on the design "RFID RC522 module case" by [CoinCorrector](https://www.printables.com/@CoinCorrector) from [Printables](https://www.printables.com/model/1012641-rfid-rc522-module-case/files). Modified for the Mock Up Board Simulator.
 
 ---
 
