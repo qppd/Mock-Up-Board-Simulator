@@ -76,12 +76,6 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 - ✅ **Real-Time Component Monitoring**
 - ✅ **Industrial-Grade Error Handling**
 
-### � **Future Expansion Possibilities**
-- **Temperature & Humidity Sensor** - Environmental monitoring
-- **Motion Detection (PIR)** - Passive infrared sensing  
-- **GPS Module** - Location tracking
-- **Bluetooth/WiFi** - Wireless connectivity
-
 
 ### 🌟 **Core Capabilities**
 - **Cross-Platform Architecture**: Unified codebase for Arduino C++ and Python implementations
@@ -122,6 +116,13 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 |-----------|---------------|-----------|---------|-----------|-------------|---------|
 | **Infrared Receiver** | TSOP1738 38kHz | Digital | 5V | 38kHz | D17 | GPIO17 |
 | **PIR Motion Sensor** | HC-SR501 | Digital | 5V | 1Hz | D18 | GPIO18 |
+
+### 🖨️ **3D Printed Enclosures**
+| Component | Material | Print Time | Printer Compatibility |
+|-----------|----------|------------|----------------------|
+| **LCD Mount** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
+
+![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
 ---
 
@@ -419,6 +420,11 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 Wiring.fzz                       # Fritzing project file
 │   ├── 📄 Wiring.png                       # Main wiring diagram
 │   └── 📄 Component_Layouts.png            # Individual component layouts
+│
+├── 📁 model/                               # 3D Models & Enclosures
+│   ├── 📄 Board_Simulator_Lcd_Mount.stl    # 3D printable LCD mount
+│   ├── 📄 Board_Simulator_Lcd_Mount.png    # LCD mount preview image
+│   └── 📄 CE3V3SE_Board_Simulator_Lcd_Mount.gcode # GCODE for CE3V3SE printer
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
