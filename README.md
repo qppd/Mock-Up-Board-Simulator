@@ -130,6 +130,9 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 
 ![Dot Matrix Display Mount Preview](model/Board_Simulator_Dot_Matrix_Mount.png)
 
+### 📜 **Credits**
+- **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
+
 ---
 
 ## ⚡ System Requirements
