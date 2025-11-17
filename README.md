@@ -127,6 +127,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Servo Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Sound Sensor Mount (Top & Bottom)** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
 | **RFID Mount (Top & Bottom)** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
+| **PIR Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
@@ -141,6 +142,8 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ![Sound Sensor Mount Preview](model/Board_Simulator_Sound_Sensor_Mount.png)
 
 ![RFID Mount Preview](model/Board_Simulator_Rfid_Mount.png)
+
+![PIR Mount Preview](model/Board_Simulator_Pir_Mount.webp)
 
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
@@ -464,7 +467,10 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 Board_Simulator_Rfid_Mount.png    # RFID mount preview image
 │   ├── 📄 Board_Simulator_Rfid_Mount_Bottom.stl    # 3D printable RFID mount bottom
 │   ├── 📄 Board_Simulator_Rfid_Mount_Top.stl    # 3D printable RFID mount top
-│   └── 📄 CE3V3SE_Board_Simulator_Rfid_Mount.gcode # GCODE for RFID mount (CE3V3SE)
+│   ├── 📄 CE3V3SE_Board_Simulator_Rfid_Mount.gcode # GCODE for RFID mount (CE3V3SE)
+│   ├── 📄 Board_Simulator_Pir_Mount.stl    # 3D printable PIR sensor mount
+│   ├── 📄 Board_Simulator_Pir_Mount.webp    # PIR mount preview image
+│   └── 📄 CE3V3SE_Board_Simulator_Pir_Mount.gcode # GCODE for PIR mount (CE3V3SE)
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
