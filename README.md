@@ -123,12 +123,15 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **LCD Mount** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
 | **Ultrasonic Sensor Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Dot Matrix 8x8 Display Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
+| **Joystick Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
 ![Ultrasonic Sensor Mount Preview](model/Board_Simulator_Ultrasonic_Mount.png)
 
 ![Dot Matrix Display Mount Preview](model/Board_Simulator_Dot_Matrix_Mount.png)
+
+![Joystick Mount Preview](model/Board_Simulator_Joy_Stick_Mount.png)
 
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
@@ -439,7 +442,8 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 CE3V3SE_Board_Simulator_Ultrasonic_Mount.gcode # GCODE for ultrasonic mount (CE3V3SE)
 │   ├── 📄 Board_Simulator_Dot_Matrix_Mount.stl    # 3D printable dot matrix display mount
 │   ├── 📄 Board_Simulator_Dot_Matrix_Mount.png    # Dot matrix mount preview image
-│   └── 📄 CE3V3SE_Board_Simulator_Dot_Matrix_Mount.gcode # GCODE for dot matrix mount (CE3V3SE)
+│   ├── 📄 CE3V3SE_Board_Simulator_Dot_Matrix_Mount.gcode # GCODE for dot matrix mount (CE3V3SE)
+│   └── 📄 Board_Simulator_Joy_Stick_Mount.png    # Joystick mount preview image
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
