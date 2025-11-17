@@ -124,6 +124,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Ultrasonic Sensor Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Dot Matrix 8x8 Display Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Joystick Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
+| **Servo Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
@@ -132,6 +133,8 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ![Dot Matrix Display Mount Preview](model/Board_Simulator_Dot_Matrix_Mount.png)
 
 ![Joystick Mount Preview](model/Board_Simulator_Joy_Stick_Mount.png)
+
+![Servo Mount Preview](model/Board_Simulator_Servo_Mount.png)
 
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
@@ -443,7 +446,9 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 Board_Simulator_Dot_Matrix_Mount.stl    # 3D printable dot matrix display mount
 │   ├── 📄 Board_Simulator_Dot_Matrix_Mount.png    # Dot matrix mount preview image
 │   ├── 📄 CE3V3SE_Board_Simulator_Dot_Matrix_Mount.gcode # GCODE for dot matrix mount (CE3V3SE)
-│   └── 📄 Board_Simulator_Joy_Stick_Mount.png    # Joystick mount preview image
+│   ├── 📄 Board_Simulator_Joy_Stick_Mount.png    # Joystick mount preview image
+│   ├── 📄 Board_Simulator_Servo_Mount.png    # Servo mount preview image
+│   └── 📄 CE3V3SE_Board_Simulator_Servo_Mount.gcode # GCODE for servo mount (CE3V3SE)
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
