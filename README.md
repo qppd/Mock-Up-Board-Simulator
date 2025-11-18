@@ -129,6 +129,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **RFID Mount** | PLA/ABS | ~2-3 hours | CE3V3SE or compatible |
 | **PIR Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 | **Flame Sensor Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
+| **IR Mount** | PLA/ABS | ~1-2 hours | CE3V3SE or compatible |
 
 ![LCD Mount Preview](model/Board_Simulator_Lcd_Mount.png)
 
@@ -147,6 +148,8 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ![PIR Mount Preview](model/Board_Simulator_Pir_Mount.webp)
 
 ![Flame Sensor Mount Preview](model/Board_Simulator_Flame_Sensor_Mount.png)
+
+![IR Mount Preview](model/Board_Simulator_IR_Mount.png)
 
 ### 📜 **Credits**
 - **Joystick Case**: Based on the design "Case for Arduino Joystick" by [Marcel Römer](https://grabcad.com/marcel.romer-1) from [GrabCAD](https://grabcad.com/library/case-for-arduino-joystick-1). Modified for integration with the Mock Up Board Simulator.
@@ -476,7 +479,9 @@ Mock-Up-Board-Simulator/
 │   ├── 📄 CE3V3SE_Board_Simulator_Pir_Mount.gcode # GCODE for PIR mount (CE3V3SE)
 │   ├── 📄 Board_Simulator_Flame_Sensor_Mount.stl    # 3D printable flame sensor mount
 │   ├── 📄 Board_Simulator_Flame_Sensor_Mount.png    # Flame sensor mount preview image
-│   └── 📄 CE3V3SE_Board_Simulator_Flame_Sensor_Mount.gcode # GCODE for flame sensor mount (CE3V3SE)
+│   ├── 📄 CE3V3SE_Board_Simulator_Flame_Sensor_Mount.gcode # GCODE for flame sensor mount (CE3V3SE)
+│   ├── 📄 Board_Simulator_IR_Mount.stl    # 3D printable IR sensor mount
+│   └── 📄 Board_Simulator_IR_Mount.png    # IR sensor mount preview image
 │
 ├── 📁 docs/                                # Documentation & Guides
 │   ├── 📄 API_Reference.md                 # Complete API documentation
