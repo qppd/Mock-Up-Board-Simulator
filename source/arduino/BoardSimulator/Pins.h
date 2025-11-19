@@ -46,6 +46,9 @@
 #define ULTRASONIC_TRIG_PIN 17
 #define ULTRASONIC_ECHO_PIN 18
 
+// PIR Motion Sensor pin assignment
+#define PIR_MOTION_PIN 23
+
 // Note: For Arduino Uno, adjust pins as needed due to limited I/O
 // Arduino Mega 2560 recommended for full module support
 
