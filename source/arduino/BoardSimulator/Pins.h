@@ -43,7 +43,7 @@
 #define MATRIX_CS_PIN 50     // Chip Select (for Arduino Mega)
 
 // Ultrasonic Sensor (HC-SR04) pins
-#define ULTRASONIC_TRIG_PIN 24
+#define ULTRASONIC_TRIG_PIN 27
 #define ULTRASONIC_ECHO_PIN 25
 
 // PIR Motion Sensor pin assignment
