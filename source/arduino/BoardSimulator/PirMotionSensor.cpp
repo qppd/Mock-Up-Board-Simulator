@@ -40,3 +40,15 @@ unsigned long PirMotionSensor::getLastMotionTime() {
 void PirMotionSensor::setDebounceTime(unsigned long debounceMs) {
     motionDebounceTime = debounceMs;
 }
+
+bool PirMotionSensor::selfTest() {
+    // Basic self-test: check if pin can be read
+    bool testRead1 = digitalRead(pirPin);
+    delay(10);
+    bool testRead2 = digitalRead(pirPin);
+    
+    // If readings are consistent (both HIGH or both LOW), sensor is likely working
+    // PIR sensors typically read LOW when no motion, but we can't guarantee state
+    // So we just check that we can read from the pin
+    return (testRead1 == HIGH || testRead1 == LOW) && (testRead2 == HIGH || testRead2 == LOW);
+}

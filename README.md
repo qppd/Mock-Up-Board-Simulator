@@ -67,9 +67,10 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Sound Sensor Module** | ✅ Complete | � *Simulation* | Analog + Digital | 🟢 Arduino Ready |
 | **Dot Matrix Display** | ✅ Complete | 🟡 *Simulation* | SPI + MAX7219 | 🟢 Arduino Ready |
 | **Ultrasonic Sensor** | ✅ Complete | ✅ Complete | Digital Trigger/Echo | � Production Ready |
+| **PIR Motion Sensor** | ✅ Complete | � *Simulation* | Digital | 🟢 Arduino Ready |
 
 ### 🎯 **Complete Implementation Status**
-- ✅ **All 11 Requested Modules Implemented**
+- ✅ **All 12 Requested Modules Implemented**
 - ✅ **Comprehensive Arduino C++ Support**  
 - ✅ **Cross-Platform Python Implementation**
 - ✅ **Professional Self-Test Systems**
@@ -432,7 +433,8 @@ Mock-Up-Board-Simulator/
 │   │   ├── 📄 SolenoidController.{h,cpp}  # Solenoid actuator driver
 │   │   ├── 📄 SoundSensor.{h,cpp}         # Sound/microphone sensor
 │   │   ├── 📄 DotMatrixDisplay.{h,cpp}    # 8x8 LED matrix display
-│   │   └── 📄 UltrasonicSensor.{h,cpp}    # Distance measurement sensor
+│   │   ├── 📄 UltrasonicSensor.{h,cpp}    # Distance measurement sensor
+│   │   └── 📄 PirMotionSensor.{h,cpp}     # PIR motion detection sensor
 │   │
 │   └── 📁 rpi/BoardSimulator/              # Raspberry Pi Python Implementation
 │       ├── 📄 main.py                      # Main entry point

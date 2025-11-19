@@ -14,6 +14,7 @@
 #include "SoundSensor.h"
 #include "DotMatrixDisplay.h"
 #include "UltrasonicSensor.h"
+#include "PirMotionSensor.h"
 #include "Pins.h"
 
 // Keypad configuration
@@ -41,6 +42,7 @@ SolenoidController solenoid(SOLENOID_RELAY_PIN, SOLENOID_STATUS_PIN);
 SoundSensor soundSensor(SOUND_ANALOG_PIN, SOUND_DIGITAL_PIN);
 DotMatrixDisplay matrixDisplay(MATRIX_DATA_PIN, MATRIX_CLOCK_PIN, MATRIX_CS_PIN);
 UltrasonicSensor ultrasonicSensor(ULTRASONIC_TRIG_PIN, ULTRASONIC_ECHO_PIN);
+PirMotionSensor pirSensor(PIR_MOTION_PIN);
 
 void setup() {
   Serial.begin(9600);
@@ -59,6 +61,7 @@ void setup() {
   soundSensor.begin();
   matrixDisplay.begin();
   ultrasonicSensor.begin();
+  pirSensor.begin();
   
   lcd.clear();
   lcd.print("System Ready!");
@@ -184,6 +187,13 @@ void loop() {
       } else {
         Serial.println("Ultrasonic: Out of range or error");
       }
+    } else if (cmd == "PIR") {
+      bool motion = pirSensor.readMotion();
+      bool detected = pirSensor.motionDetected();
+      Serial.print("PIR Motion: ");
+      Serial.print(motion ? "HIGH" : "LOW");
+      Serial.print(", Detected: ");
+      Serial.println(detected ? "YES" : "NO");
     } else if (cmd == "TEST_ALL") {
       Serial.println("=== COMPONENT SELF-TEST ===");
       Serial.print("LCD: "); Serial.println("OK"); // LCD doesn't have self-test
@@ -197,6 +207,7 @@ void loop() {
       Serial.print("Sound Sensor: "); Serial.println(soundSensor.selfTest() ? "PASS" : "FAIL");
       Serial.print("Matrix Display: "); Serial.println(matrixDisplay.selfTest() ? "PASS" : "FAIL");
       Serial.print("Ultrasonic: "); Serial.println(ultrasonicSensor.selfTest() ? "PASS" : "FAIL");
+      Serial.print("PIR Sensor: "); Serial.println(pirSensor.selfTest() ? "PASS" : "FAIL");
       Serial.println("=== TEST COMPLETE ===");
     } else {
       Serial.println("Unknown command. Type 'TEST_ALL' for available commands.");
