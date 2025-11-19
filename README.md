@@ -102,7 +102,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Joystick Module** | 10kΩ Potentiometers | Analog (X,Y) + Digital | 5V | <10ms | A1, A2, D3 | ADC1, ADC2, GPIO3 |
 | **4x4 Matrix Keypad** | Membrane Switch | Digital Matrix | 5V | <5ms | D4-D11 | GPIO4-11 |
 | **Sound Sensor** | Electret Microphone | Analog + Digital | 3.3-5V | <1ms | A3, D12 | ADC3, GPIO12 |
-| **Ultrasonic HC-SR04** | Distance Measurement | Digital Trigger/Echo | 5V | 38ms max | D13, D14 | GPIO13, 14 |
+| **Ultrasonic HC-SR04** | Distance Measurement | Digital Trigger/Echo | 5V | 38ms max | D24, D25 | GPIO13, 14 |
 | **RFID RC522** | 13.56MHz RFID | SPI | 3.3V | 100ms | D10-D13 | CE0, MOSI, MISO, SCLK |
 
 ### ⚙️ **Actuators & Control**
