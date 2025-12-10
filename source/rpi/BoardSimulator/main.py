@@ -9,6 +9,7 @@ from joystick_controller import JoystickController
 from matrix_keypad import MatrixKeypad
 from infrared_receiver import InfraredReceiver
 from ultrasonic_sensor import UltrasonicSensor
+from pir_motion_sensor import PirMotionSensor
 import pins
 import atexit
 import time
@@ -22,6 +23,7 @@ def main():
     keypad = MatrixKeypad(pins.KEYPAD_ROW_PINS, pins.KEYPAD_COL_PINS, pins.KEYPAD_LAYOUT)
     ir_receiver = InfraredReceiver(pins.IR_RECEIVER_PIN)
     ultrasonic = UltrasonicSensor(pins.ULTRASONIC_TRIG_PIN, pins.ULTRASONIC_ECHO_PIN)
+    pir_sensor = PirMotionSensor(pins.PIR_MOTION_PIN)
     
     # Note: RFID, Solenoid, Sound Sensor, and Matrix Display modules
     # can be added similarly when their Python implementations are created
@@ -31,6 +33,7 @@ def main():
         keypad.cleanup()
         ir_receiver.cleanup()
         ultrasonic.cleanup()
+        pir_sensor.cleanup()
         print("All components cleaned up")
     
     atexit.register(cleanup_all)
@@ -45,6 +48,7 @@ def main():
     keypad.begin()
     ir_receiver.begin()
     ultrasonic.begin()
+    pir_sensor.begin()
     
     lcd.clear()
     lcd.print("System Ready!")
@@ -52,7 +56,7 @@ def main():
     print("=== BOARD SIMULATOR READY ===")
     print("Available Commands:")
     print("LCD, FLAME, SERVO:<angle>, JOYSTICK, KEYPAD")
-    print("IR, ULTRASONIC, TEST_ALL, EXIT")
+    print("IR, ULTRASONIC, PIR, TEST_ALL, EXIT")
     print("Note: More modules available in Arduino version")
     while True:
         cmd = input(">> ").strip()
@@ -108,6 +112,11 @@ def main():
                 print(f"Ultrasonic distance: {distance} cm")
             else:
                 print("Ultrasonic: Out of range or error")
+        elif cmd.upper() == "PIR":
+            motion = pir_sensor.read_motion()
+            print(f"PIR Motion: {'DETECTED' if motion else 'NONE'}")
+            if pir_sensor.motion_detected():
+                print("PIR: Motion event triggered!")
         elif cmd.upper() == "TEST_ALL":
             print("=== COMPONENT SELF-TEST ===")
             print("LCD: OK")  # LCD doesn't have self-test
@@ -117,6 +126,7 @@ def main():
             print(f"Keypad: {'PASS' if keypad.self_test() else 'FAIL'}")
             print(f"IR Receiver: {'PASS' if ir_receiver.self_test() else 'FAIL'}")
             print(f"Ultrasonic: {'PASS' if ultrasonic.self_test() else 'FAIL'}")
+            print(f"PIR Sensor: {'PASS' if pir_sensor.self_test() else 'FAIL'}")
             print("=== TEST COMPLETE ===")
         else:
             print("Unknown command. Type 'TEST_ALL' for available commands or 'EXIT' to quit.")

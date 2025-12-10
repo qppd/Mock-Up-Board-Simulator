@@ -40,7 +40,7 @@
 // Dot Matrix Display (MAX7219) SPI pins
 #define MATRIX_DATA_PIN 51   // MOSI (for Arduino Mega)
 #define MATRIX_CLOCK_PIN 52  // SCK (for Arduino Mega) 
-#define MATRIX_CS_PIN 50     // Chip Select (for Arduino Mega)
+#define MATRIX_CS_PIN 48     // Chip Select (for Arduino Mega)
 
 // Ultrasonic Sensor (HC-SR04) pins
 #define ULTRASONIC_TRIG_PIN 27

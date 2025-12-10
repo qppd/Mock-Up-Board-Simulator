@@ -5,15 +5,15 @@ LCD_ADDR = 0x27
 LCD_COLS = 16
 LCD_ROWS = 2
 FLAME_ANALOG_PIN = 0
-FLAME_DIGITAL_PIN = 2
+FLAME_DIGITAL_PIN = 17  # Changed from GPIO2 to avoid I2C SDA conflict
 SERVO_PIN = 18  # GPIO18 (Hardware PWM)
 JOY_VRX_PIN = 1
 JOY_VRY_PIN = 2
 JOY_SW_PIN = 3
 
 # 4x4 Matrix Keypad GPIO assignments
-KEYPAD_ROW_PINS = [4, 5, 6, 7]     # GPIO4, GPIO5, GPIO6, GPIO7
-KEYPAD_COL_PINS = [8, 9, 10, 11]   # GPIO8, GPIO9, GPIO10, GPIO11
+KEYPAD_ROW_PINS = [4, 5, 6, 26]     # GPIO4, GPIO5, GPIO6, GPIO26
+KEYPAD_COL_PINS = [22, 23, 24, 27]   # GPIO22, GPIO23, GPIO24, GPIO27
 
 # Keypad layout configuration
 KEYPAD_LAYOUT = [
@@ -24,7 +24,7 @@ KEYPAD_LAYOUT = [
 ]
 
 # Infrared Receiver GPIO pin
-IR_RECEIVER_PIN = 12
+IR_RECEIVER_PIN = 21
 
 # RFID RC522 SPI pins (using default SPI)
 RFID_SS_PIN = 8     # GPIO8 (CE0)
@@ -46,6 +46,9 @@ MATRIX_CS_PIN = 15       # GPIO15
 # Ultrasonic Sensor (HC-SR04) pins
 ULTRASONIC_TRIG_PIN = 16
 ULTRASONIC_ECHO_PIN = 20
+
+# PIR Motion Sensor pin
+PIR_MOTION_PIN = 12
 
 # I2C pins (hardware defined)
 # SDA: GPIO2 (Pin 3)

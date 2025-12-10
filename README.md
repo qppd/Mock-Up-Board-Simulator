@@ -67,7 +67,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | **Sound Sensor Module** | ✅ Complete | � *Simulation* | Analog + Digital | 🟢 Arduino Ready |
 | **Dot Matrix Display** | ✅ Complete | 🟡 *Simulation* | SPI + MAX7219 | 🟢 Arduino Ready |
 | **Ultrasonic Sensor** | ✅ Complete | ✅ Complete | Digital Trigger/Echo | � Production Ready |
-| **PIR Motion Sensor** | ✅ Complete | � *Simulation* | Digital | 🟢 Arduino Ready |
+| **PIR Motion Sensor** | ✅ Complete | ✅ Complete | Digital | 🟢 Production Ready |
 
 ### 🎯 **Complete Implementation Status**
 - ✅ **All 12 Requested Modules Implemented**
@@ -98,7 +98,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 ### 🔍 **Sensors & Input Devices**
 | Component | Specification | Interface | Voltage | Response Time | Arduino Pin | RPi Pin |
 |-----------|---------------|-----------|---------|---------------|-------------|---------|
-| **Flame Sensor** | Infrared Photodiode | Analog + Digital | 3.3-5V | <1ms | A0, D2 | ADC0, GPIO2 |
+| **Flame Sensor** | Infrared Photodiode | Analog + Digital | 3.3-5V | <1ms | A0, D2 | ADC0, GPIO17 |
 | **Joystick Module** | 10kΩ Potentiometers | Analog (X,Y) + Digital | 5V | <10ms | A1, A2, D3 | ADC1, ADC2, GPIO3 |
 | **4x4 Matrix Keypad** | Membrane Switch | Digital Matrix | 5V | <5ms | D4-D11 | GPIO4-11 |
 | **Sound Sensor** | Electret Microphone | Analog + Digital | 3.3-5V | <1ms | A3, D12 | ADC3, GPIO12 |
@@ -116,7 +116,7 @@ The **Mock Up Board Simulator** is a professional-grade embedded systems develop
 | Component | Specification | Interface | Voltage | Data Rate | Arduino Pin | RPi Pin |
 |-----------|---------------|-----------|---------|-----------|-------------|---------|
 | **Infrared Receiver** | TSOP1738 38kHz | Digital | 5V | 38kHz | D17 | GPIO17 |
-| **PIR Motion Sensor** | HC-SR501 | Digital | 5V | 1Hz | D18 | GPIO18 |
+| **PIR Motion Sensor** | HC-SR501 | Digital | 5V | 1Hz | D23 | GPIO21 |
 
 ### 🖨️ **3D Printed Enclosures**
 | Component | Material | Print Time | Printer Compatibility |
@@ -334,7 +334,7 @@ Exiting...
 #### **Raspberry Pi GPIO Mapping**
 ```python
 # GPIO Pin Assignments (BCM numbering)
-FLAME_DIGITAL_PIN = 2     # GPIO2 - Flame sensor digital
+FLAME_DIGITAL_PIN = 17    # GPIO17 - Flame sensor digital
 JOY_SW_PIN = 3           # GPIO3 - Joystick switch
 KEYPAD_ROWS = [4,5,6,7]  # GPIO4-7 - Keypad rows
 KEYPAD_COLS = [8,9,10,11] # GPIO8-11 - Keypad columns
@@ -446,6 +446,7 @@ Mock-Up-Board-Simulator/
 │       ├── 📄 matrix_keypad.py             # Keypad input handler
 │       ├── 📄 infrared_receiver.py         # IR remote control simulation
 │       ├── 📄 ultrasonic_sensor.py         # Distance measurement simulation
+│       ├── 📄 pir_motion_sensor.py         # PIR motion detection module
 │       ├── 📄 rfid_rc522.py                # RFID module simulation (planned)
 │       ├── 📄 solenoid_controller.py       # Solenoid simulation (planned)
 │       ├── 📄 sound_sensor.py              # Sound sensor simulation (planned)
